@@ -72,8 +72,8 @@ export default function Login() {
                                 },
                             })}
                             className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition ${errors.email
-                                    ? "border-red-400 focus:ring-red-400"
-                                    : "border-gray-300 focus:ring-blue-500"
+                                ? "border-red-400 focus:ring-red-400"
+                                : "border-gray-300 focus:ring-blue-500"
                                 }`}
                         />
                         {errors.email && (
@@ -99,8 +99,8 @@ export default function Login() {
                                 },
                             })}
                             className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 transition ${errors.password
-                                    ? "border-red-400 focus:ring-red-400"
-                                    : "border-gray-300 focus:ring-blue-500"
+                                ? "border-red-400 focus:ring-red-400"
+                                : "border-gray-300 focus:ring-blue-500"
                                 }`}
                         />
                         {errors.password && (

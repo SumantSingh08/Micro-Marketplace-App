@@ -7,7 +7,7 @@ export default function Home() {
     const [products, setProducts] = useState([]);
     const [search, setSearch] = useState("");
     const [loading, setLoading] = useState(false);
-    const  {token} = useContext(AuthContext);
+    const { token } = useContext(AuthContext);
 
     const [page, setPage] = useState(1);
     const [pages, setPages] = useState(1);
@@ -103,8 +103,8 @@ export default function Home() {
                                         key={index}
                                         onClick={() => setPage(index + 1)}
                                         className={`px-4 py-2 rounded-lg border transition ${page === index + 1
-                                                ? "bg-blue-600 text-white border-blue-600"
-                                                : "bg-white hover:bg-gray-100"
+                                            ? "bg-blue-600 text-white border-blue-600"
+                                            : "bg-white hover:bg-gray-100"
                                             }`}
                                     >
                                         {index + 1}

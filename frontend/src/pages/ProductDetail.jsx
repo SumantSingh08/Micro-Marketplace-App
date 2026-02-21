@@ -76,14 +76,13 @@ export default function ProductDetail() {
 
             {/* Favorite Button */}
             <button
-              
+
               className="absolute top-4 right-4 bg-white/90 backdrop-blur-md p-3 rounded-full shadow hover:scale-110 transition cursor-pointer"
             >
               <Heart
                 size={20}
-                className={`transition ${
-                  favorite ? "fill-red-500 text-red-500" : "text-gray-600"
-                }`}
+                className={`transition ${favorite ? "fill-red-500 text-red-500" : "text-gray-600"
+                  }`}
               />
             </button>
           </div>

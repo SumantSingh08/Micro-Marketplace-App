@@ -1,7 +1,7 @@
 import { useNavigate, Link } from "react-router-dom";
 import { useState, useContext } from "react";
 import Api from "../service/Api";
-import {ArrowRight, Heart} from "lucide-react";
+import { ArrowRight, Heart } from "lucide-react";
 
 export default function ProductCard({ product, refresh }) {
     const navigate = useNavigate();
@@ -32,7 +32,7 @@ export default function ProductCard({ product, refresh }) {
 
     return (
         <Link to={`/product/${product._id}`} className="block">
-            
+
 
             <div className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100 group">
 
