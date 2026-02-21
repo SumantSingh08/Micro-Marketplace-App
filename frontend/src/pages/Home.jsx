@@ -51,7 +51,7 @@ export default function Home() {
                         Discover Amazing Products
                     </h1>
                     <p className="text-lg md:text-xl text-white/90">
-                        Buy, sell, and manage products with ease.
+                        Add and manage products with ease.
                     </p>
 
                     <div className="mt-8 max-w-xl mx-auto">
