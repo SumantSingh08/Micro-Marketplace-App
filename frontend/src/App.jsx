@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import ProductDetail from "./pages/ProductDetail";
 import { AuthProvider } from "./context/AuthContext";
-import "./app.css";
+import "./App.css";
 import ProtectedRoute from "./components/ProtectedRoute";
 import EditProduct from "./components/EditProduct";
 import AddProduct from "./pages/AddProduct";
