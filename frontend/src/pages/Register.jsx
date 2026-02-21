@@ -6,7 +6,7 @@ import { AuthContext } from "../context/AuthContext";
 
 export default function Register() {
   const navigate = useNavigate();
-  const { login } = useContext(AuthContext);
+  const { login, setUser } = useContext(AuthContext);
 
   const {
     register,
@@ -24,6 +24,7 @@ export default function Register() {
       setLoading(true);
       const res = await Api.post("/auth/register", data);
       login(res.data.token);
+      setUser(res.data._id);
       navigate("/");
     } catch (err) {
       setError(err.response?.data?.message || "Something went wrong");

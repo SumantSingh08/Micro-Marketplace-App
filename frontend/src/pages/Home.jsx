@@ -7,7 +7,7 @@ export default function Home() {
     const [products, setProducts] = useState([]);
     const [search, setSearch] = useState("");
     const [loading, setLoading] = useState(false);
-    const { token } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
 
     const [page, setPage] = useState(1);
     const [pages, setPages] = useState(1);
@@ -72,7 +72,7 @@ export default function Home() {
                     Featured Products
                 </h2>
 
-                {token && (
+                {user && (
                     <>
                         <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                             {products.map((product) => (

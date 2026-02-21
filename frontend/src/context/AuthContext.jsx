@@ -5,7 +5,7 @@ export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [token, setToken] = useState(localStorage.getItem("token"));
-
+  const [user, setUser] = useState(null);
   useEffect(() => {
     if (token) {
       Api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ token, login, logout }}>
+    <AuthContext.Provider value={{ token, setUser, user, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

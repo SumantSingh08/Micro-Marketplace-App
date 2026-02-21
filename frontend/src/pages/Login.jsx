@@ -5,7 +5,7 @@ import { AuthContext } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
-    const { login } = useContext(AuthContext);
+    const { login, setUser } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const {
@@ -24,6 +24,7 @@ export default function Login() {
             setLoading(true);
             const res = await Api.post("/auth/login", data);
             login(res.data.token);
+            setUser(res.data._id);
             navigate("/");
         } catch (err) {
             setServerError(
